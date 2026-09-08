@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <select id="priorityInput" aria-label="Task priority">
+                <option value="low">Low priority</option>
+                <option value="medium" selected>Medium priority</option>
+                <option value="high">High priority</option>
+            </select>
+            <input type="date" id="dueDateInput" aria-label="Due date">
+            <button id="addBtn">Add</button>
+        </div>
+
+        <section class="stats" aria-label="Task summary">
+            <div><strong id="totalCount">0</strong><span>Total</span></div>
+            <div><strong id="activeCount">0</strong><span>Active</span></div>
+            <div><strong id="completedCount">0</strong><span>Done</span></div>
+        </section>
+
+        <div class="list-header">
+            <p id="counter">0 tasks remaining</p>
+            <button id="clearCompleted" class="clear-btn" type="button">Clear completed</button>
+        </div>
+
+        <nav class="filters" aria-label="Task filters">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="active">Active</button>
+            <button class="filter-btn" type="button" data-filter="completed">Completed</button>
+        </nav>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
